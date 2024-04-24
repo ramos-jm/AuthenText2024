@@ -1,0 +1,505 @@
+
+html {
+    height: 100%;
+}
+
+header {
+    background-color: #fff;
+    padding: 0px;
+    width: 100%;
+    position: fixed; /* Add this */
+    top: 0; /* Add this to stick it to the top */
+    z-index: 1000; /* Add this to ensure it stays on top of other content */
+}
+
+.logo {
+    flex: 1;
+}
+
+nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    font-family: Cairo; 
+}
+
+.nav-links li {
+    font-size: 12px;
+    font-family: Cairo;
+}
+
+.nav-links li ~ li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    width: 700px;
+    height: 38px;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    font-family: Cairo;
+    font-weight: 700;
+}
+
+/* Adjust margin-top for the content to prevent it from being hidden behind the fixed header */
+.content {
+    margin-top: 100px; /* Adjust this value based on the height of your header */
+}
+
+.nav-links a:hover {
+    color: #ff1900;
+}
+
+body {
+    background-image: url('./images/SRBG7.png');  
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.middle {
+    text-align: center;
+    padding: 80px;
+    color: #fff;
+}
+
+
+.middle h1 {
+
+    color: #FFF;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 580;
+    line-height: normal;
+    margin-bottom: 8px;
+}
+
+.middle p {
+    color: #FFF;
+    text-align: center center;
+    font-family: Cairo;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 290;
+}
+.text{
+    font-size: 1.10rem;
+    margin-top: var(--space--top);
+    line-height: .0rem;
+    
+    
+}
+.text p{
+    font-size: 1.10rem;
+    margin-top: var(--space--top);
+    line-height: 1.09rem;
+}
+
+
+.attribution {
+    font-family: Cairo;
+    position: fixed;
+    margin-left: 35px;
+    top: 33%;
+    transform: translateY(-60%);
+    left: 53px;
+    font-size: 13px;
+    color: #FFF;
+}
+
+.attribution-1{
+    font-weight: bold;
+    font-family: Cairo;
+    position: fixed;
+    margin-left: 35px;
+    top: 30%;
+    transform: translateY(-60%);
+    left: 55px;
+    font-size: 18px;
+    color: #FFF;
+}
+
+.Result-title{
+    font-weight: bold;
+    font-family: Cairo;
+    position: fixed;
+    margin-left: 35px;
+    top: 50%;
+    transform: translateY(-60%);
+    left: 55px;
+    font-size: 18px;
+    color: #FFF;
+}
+
+
+
+.FeedBack-title{
+    font-weight: bold;
+    font-family: Cairo;
+    position: fixed;
+    margin-left: 35px;
+    top: 66%;
+    transform: translateY(-60%);
+    left: 55px;
+    font-size: 18px;
+    color: #FFF;
+}
+
+.attribution-2{
+    font-family: Cairo;
+    position: fixed;
+    top: 71%;
+    transform: translateY(-60%);
+    margin-left: 35px;
+    left: 53px;
+    font-size: 15px;
+    color: #FFF;
+}
+
+
+.attribution-3{
+    font-family: Cairo;
+    position: fixed;
+    top: 75%;
+    transform: translateY(-60%);
+    margin-left: 35px;
+    left: 53px;
+    font-size: 16px;
+    color: #FFF;
+}
+
+
+
+.container-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: Cairo;
+    width: 90vw;
+    max-width: 500px;
+    height: 26vh;
+    content: attr(txt);
+    position: fixed;
+    top: 50%; /* Adjust the top position here */
+    left: 28%; /* Adjust the left position here */
+    transform: translate(-50%, -50%);
+    
+}
+
+.prbr-cl {
+    --prcnt: 50; 
+    --clr:#eeeeee; 
+    --bg:#ffffff; 
+    --dsh: calc(283 * var(--prcnt) / 100);
+
+    position: relative;
+    display: flex;
+    margin: 0 ;
+    margin-left: -10px;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    border-radius: 80%;
+    color: var(--clr);
+    animation: shw 1s ease;
+}
+
+.prbr-cl svg { 
+    transform: rotate(-90deg); 
+}
+
+.prbr-cl-bg {
+    fill: none;
+    stroke: var(--bg);
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.prbr-cl-fill {
+    fill: none;
+    stroke: var(--clr);
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: var(--dsh) 283;
+    transition: stroke-dasharray 1s ease;
+    animation: prgs 2s ease;
+}
+
+/* Num (units) */
+.prbr-cl::after {
+    content: attr(num);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Text (strings) */
+.prbr-cl::before {
+    content: attr(txt);
+    position: absolute;
+    top: 60%; /* Adjust the top position here */
+    left: 50%; /* Adjust the left position here */
+    transform: translate(-50%, -50%);
+}
+
+/* inner-bg inside the circle */
+.prbr-cl[inner-bg] { 
+    background: var(--bg); 
+}
+
+/* loading animation */
+.prbr-cl[anim] .prbr-cl-fill { 
+    animation: prgs 2s ease-in-out infinite alternate; 
+}
+
+.prbr-cl[txt]::before { 
+    content: attr(txt); 
+    font-weight: bold; 
+}
+
+@keyframes shw {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes prgs {
+    from { stroke-dashoffset: 283; }
+    to { stroke-dashoffset: 0; }
+}
+
+
+.container-1 {
+    margin-left: 30px;
+    position: absolute;
+    top: 12%;
+    margin-left: 30px;
+    left: 780px;
+    color: #FFF;
+    font-family: Cairo;
+    font-size: 14px;
+   
+    height: 700px;
+    margin-top: 15px;
+    margin-bottom: 18px;
+}
+
+.container-1 a {
+    display: inline-block; /* or display: block; */
+    margin-left: 216px; /* Adjust this value as needed */
+    color: yellow;
+    text-decoration: underline;
+}
+
+ 
+.container-1 span {
+    margin-top: 10px;
+}
+  
+.container-text {
+    text-align: justify;
+    margin: 4px;
+    padding: 4px;
+    display: flex;
+    width: 700px;
+    height: 700px;
+    margin-bottom: 19px;
+}
+
+
+.text-box {
+    width: 700px;
+    height: 700px;
+    border: 2px solid #ffffff;
+    font-family: Cairo;
+    box-sizing: border-box;
+    text-align: left;
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    top: 180px;
+    bottom: 1px; /* Adjust as needed */
+    transform: translate(0%, 0%);
+    margin-bottom: 60px;
+}
+
+
+.text-output {
+    padding: 5%;
+    width: 700px;
+    height: 700px;
+    background-color: #ffffff;
+    font-family: Cairo;
+    font-size: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 32px;
+    
+    transform: translate(0%, 0%);
+margin-bottom: 50px;
+}
+
+
+
+.char-count {
+    position: absolute;
+    position: inherit;
+    right: 5px;
+    font-family: Cairo;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+
+
+.cta-button {
+    font-size: 1.10rem;
+    text-align: center;
+    font-family: Cairo;
+    display: inline-block;
+    padding: 0px;
+    width: 330px;
+    background-color: #f9f6f6;
+    color: #111;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 60px;
+    margin-top: 15px;
+   
+   
+    transform: translateY(0%);
+}
+
+.cta-button:hover {
+    font-family: Cairo;
+    background-color: #5472de;
+    color: #ffffff;
+}
+
+
+
+.cta-button {
+    font-size: 1.10rem;
+    text-align: center;
+    font-family: Cairo;
+    display: inline-block;
+    padding: 0px;
+    width: 330px;
+    background-color: #f9f6f6;
+    color: #111;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 60px;
+    margin-top: 15px;
+    transform: translateY(0%);
+}
+
+.cta-button:hover {
+    font-family: Cairo;
+    background-color: #5472de;
+    color: #ffffff;
+}
+
+
+::-webkit-scrollbar{
+    width: 9px;
+}
+::-webkit-scrollbar-track{
+    background:#000000;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#fbfbfb, #000000);
+    border-radius: 26px;
+    height: 12%;
+
+}
+
+/* Footer styles */
+footer {
+    font-family: Cairo;
+    font-size: 10px;
+    text-align: center;
+    padding: 3px;
+    background-color: #030303;
+    color: #fff;
+    margin-top: auto;
+}
+/* Terms and Condition | Privacy */
+.TCP {
+    list-style-type: none;
+    display: flex;
+    font-family: Cairo;
+    color: #fff;
+}
+
+.TCP li {
+    font-size: 11px;
+    font-family: Cairo;
+}
+
+.TCP a {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #FFF;
+    transition: color 0.3s;
+    font-family: Cairo;
+}
+/*END*/
+
+
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+}
+
+
+  /* Adjustments for small screens */
+  @media only screen and (max-width: 850px) {
+    header {
+        padding: 0 20px; /* Adjust padding for header */
+    }
+
+    .nav-links {
+        flex-wrap: wrap; /* Allow navigation links to wrap */
+        justify-content: center; /* Center align navigation links */
+        margin: 20px 0; /* Add margin for spacing */
+    }
+
+    .nav-links li {
+        font-size: 14px; /* Increase font size for navigation links */
+    }
+
+    
+}
+
+/* Adjustments for medium screens */
+@media only screen and (max-width: 1280px) {
+    /* Add any necessary adjustments for medium screens here */
+}
+
+/* Styles for large screens */
+@media (min-width: 1281px) {
+    .nav-links {
+        margin-right: 50px; /* Increase margin for navigation links */
+    }
+
+}

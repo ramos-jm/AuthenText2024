@@ -1,0 +1,269 @@
+
+html {
+    height: 100%;
+}
+
+header {
+    background-color: #fff;
+    padding: 0px ;
+    width:auto;
+}
+
+.logo {
+    flex: 1;
+  }
+
+nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    font-family: Cairo; 
+}
+
+.nav-links li {
+    font-size: 12px;
+    font-family: Cairo;
+}
+.nav-links li ~ li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    width: 700px;
+    height: 38px;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    font-family: Cairo;
+    font-weight: 700;
+}
+
+
+.nav-links a:hover {
+    color: #ff1900;
+}
+body {
+    background-image: url('../Product/HP_Images/PRDTCBG17.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.middle {
+    margin-top: 5px;
+    text-align: left;
+    padding: 80px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+}
+
+.middle h1 {
+    color: #FFF;
+    text-align: left;
+    font-family: Cairo;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 610;
+    line-height: 90%;
+    margin-bottom: 8px;
+}
+
+
+
+.middle p {
+    color: #FFF;
+    text-align: left;
+    font-family: Cairo;
+    font-size: 6px;
+    font-style: normal;
+    font-weight: 290;
+}
+
+
+
+.column-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.column {
+    flex: 1;
+}
+
+
+.text-right {
+    font-size: 1.13rem;
+    margin-top: var(--space--top);
+    text-align: justify;
+    margin-left: 15%; /* Remove margin-left */
+}
+
+.text-right p {
+    font-size: 1.13rem;
+    margin-top: var(--space--top);
+    line-height: 1.11rem;
+    text-align: justify;
+    margin-left: 15%; /* Remove margin-left */
+}
+
+.text-left p, .text-right p {
+    font-size: 1.13em;
+    margin-top: 0.5rem; /* Adjust as needed */
+    line-height: 1.11rem;
+    margin-left: 0px;
+
+}
+
+
+
+
+.cta-button {
+    
+    font-size: 1.10rem;
+    text-align: center;
+    font-family: Cairo;
+    display: inline-block;
+    padding: 0px;
+    width: 370px;
+    background-color: #fff;
+    color: #111;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 20px;
+    margin-top: 20px;
+   
+}
+
+
+
+.cta-button:hover {
+    font-family: Cairo;
+    background-color: #2751ea;
+    color: #ffffff;
+}
+
+
+
+/* Footer styles */
+footer {
+    font-family: Cairo;
+    font-size: 10px;
+    text-align: center;
+    padding: 3px;
+    background-color: #030303;
+    color: #fff;
+    margin-top: auto;
+}
+/* Terms and Condition | Privacy */
+.TCP {
+    list-style-type: none;
+    display: flex;
+    font-family: Cairo;
+    color: #fff;
+}
+
+.TCP li {
+    font-size: 11px;
+    font-family: Cairo;
+}
+
+.TCP a {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #FFF;
+    transition: color 0.3s;
+    font-family: Cairo;
+}
+/*END*/
+
+
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+  }
+
+  
+  /* Adjustments for small screens */
+@media only screen and (max-width: 850px) {
+    header {
+        padding: 0 20px; /* Adjust padding for header */
+    }
+
+    .nav-links {
+        flex-wrap: wrap; /* Allow navigation links to wrap */
+        justify-content: center; /* Center align navigation links */
+        margin: 20px 0; /* Add margin for spacing */
+    }
+
+    .nav-links li {
+        font-size: 14px; /* Increase font size for navigation links */
+    }
+
+    .middle {
+        padding: 20px; /* Adjust padding for middle section */
+        margin-top: 20px; /* Add margin to the top of middle section */
+    }
+
+    .text-right,
+    .text-right p {
+        text-align: center; /* Center align text in right-aligned text sections */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .cta-button {
+        width: 100%; /* Make CTA button full width */
+        max-width: 300px; /* Limit maximum width */
+        margin-left: auto; /* Center align CTA button */
+        margin-right: auto;
+    }
+}
+
+/* Adjustments for medium screens */
+@media only screen and (max-width: 1280px) {
+    /* Add any necessary adjustments for medium screens here */
+}
+
+/* Styles for large screens */
+@media (min-width: 1281px) {
+    .nav-links {
+        margin-right: 50px; /* Increase margin for navigation links */
+    }
+
+
+    .middle {
+        padding: 80px; /* Restore padding for middle section */
+        margin-top: 5px; /* Restore margin for the top of middle section */
+    }
+
+    .text-right,
+    .text-right p {
+        text-align: justify; /* Restore text alignment for right-aligned text sections */
+        margin-left: 9%; /* Restore left margin */
+    }
+
+    .cta-button {
+        width: 370px; /* Restore width for CTA button */
+        margin-left: 20px; /* Restore left margin for CTA button */
+        margin-top: 20px; /* Restore top margin for CTA button */
+    }
+}

@@ -1,0 +1,209 @@
+html {
+    height: 100%;
+}
+
+
+header {
+    background-color: #fff;
+    padding: 0px ;
+    width:auto;
+}
+
+.logo {
+    flex: 1;
+  }
+
+nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    font-family: Cairo; 
+}
+
+.nav-links li {
+    font-size: 12px;
+    font-family: Cairo;
+}
+.nav-links li ~ li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    width: 700px;
+    height: 38px;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    font-family: Cairo;
+    font-weight: 700;
+}
+
+
+.nav-links a:hover {
+    color: #ff1900;
+}
+body {
+    background-image: url('./HP_Images/Homepage_Background.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.middle {
+    text-align: center;
+    padding: 80px;
+    color: #fff;
+    margin-top:310px;
+}
+
+.middle p {
+    
+    color: #FFF;
+    text-align: center center;
+    font-family: Cairo;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 290;
+   
+    
+}
+.text{
+    font-size: 1.10rem;
+    margin-top: var(--space--top);
+    line-height: .9rem;
+    
+    
+    
+    
+}
+.text p{
+    font-size: 1.10rem;
+    margin-top: var(--space--top);
+    line-height: 1.09rem;
+   
+}
+.cta-button {
+    font-family: Cairo;
+    display: inline-block;
+    padding: 0px;
+    width: 400px;
+    background-color: #fff;
+    color: #111;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+   
+}
+
+.cta-button:hover {
+    font-family: Cairo;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Footer styles */
+footer {
+    font-family: Cairo;
+    font-size: 10px;
+    text-align: center;
+    padding: 3px;
+    background-color: #030303;
+    color: #fff;
+    margin-top: auto;
+}
+/* Terms and Condition | Privacy */
+.TCP {
+    list-style-type: none;
+    display: flex;
+    font-family: Cairo;
+    color: #fff;
+}
+
+.TCP li {
+    font-size: 11px;
+    font-family: Cairo;
+}
+
+.TCP a {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #FFF;
+    transition: color 0.3s;
+    font-family: Cairo;
+}
+/*END*/
+
+
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+  }
+
+ 
+  /* Adjustments for small screens */
+@media only screen and (max-width: 850px) {
+    header {
+        padding: 0 20px; /* Adjust padding for header */
+    }
+
+    .nav-links {
+        flex-wrap: wrap; /* Allow navigation links to wrap */
+        justify-content: center; /* Center align navigation links */
+        margin: 20px 0; /* Add margin for spacing */
+    }
+
+    .nav-links li {
+        font-size: 14px; /* Increase font size for navigation links */
+    }
+
+    .text-container {
+        flex-direction: column; /* Arrange text containers vertically */
+    }
+
+    .text p {
+        font-size: 14px; /* Adjust font size for text */
+        margin-top: 20px; /* Add margin for spacing */
+    }
+
+    .cta-button {
+        width: 100%; /* Make CTA button full width */
+        max-width: 300px; /* Limit maximum width */
+        margin-top: 20px; /* Add margin for spacing */
+    }
+}
+
+/* Adjustments for medium screens */
+@media only screen and (max-width: 1280px) {
+    /* Add any necessary adjustments for medium screens here */
+}
+
+/* Styles for large screens */
+@media (min-width: 1281px) {
+    .nav-links {
+        margin-right: 50px; /* Increase margin for navigation links */
+    }
+
+    .text p {
+        font-size: 16px; /* Increase font size for text */
+    }
+
+    .cta-button {
+        max-width: 400px; /* Increase maximum width for CTA button */
+    }
+}

@@ -1,0 +1,281 @@
+html {
+    height: 100%;
+}
+
+header {
+    background-color: #fff;
+    padding: 0px ;
+    width:auto;
+}
+
+.logo {
+    flex: 1;
+  }
+
+nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    font-family: Cairo; 
+}
+
+.nav-links li {
+    font-size: 12px;
+    font-family: Cairo;
+}
+.nav-links li ~ li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    width: 700px;
+    height: 38px;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    font-family: Cairo;
+    font-weight: 700;
+}
+
+.nav-links a:hover {
+    color: #ff1900;
+}
+
+body {
+    background-image: url('./Public_Images/ContactPage_Background2.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    font-family: Cairo;
+    font-weight: 200px;
+    min-height: 80vh;
+    display: flex;
+    margin-left: 24%;
+    margin-top: 55px;
+    
+}
+
+.container form {
+    margin-top: 155px;
+    font-family: Cairo;
+    font-weight: 300;
+    width: 790px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(2px);
+    flex-wrap: wrap;
+    position:fixed;
+   
+}
+
+.container form h1 {
+    color: #fff;
+    letter-spacing: 5px;
+    font-weight: 500;
+    margin-top: 25px;
+    width: 500px;
+    text-align: center;
+}
+
+.container form input {
+    color: #ffffff;
+    letter-spacing: 3px;
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    background: none;
+    border-bottom: 1px solid #fff;
+   
+}
+
+.container for input::placeholder {
+    color: #ffffff;
+    letter-spacing: 3px;
+}
+
+.container form #lastname{
+    margin-left: 20px;
+    letter-spacing: 3px;
+}
+
+.container form h4 {
+    color: #ffffff;
+    letter-spacing: 3px;
+    font-weight: 200;
+    width: 600px;
+    margin-top: 10px;
+}
+
+.container form textarea {
+    background: #ffffff;
+    color: #000000;
+    letter-spacing: 3px;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: linear-gradient(#fbfbfb, #000000);
+}
+
+.container form #button {
+    font-family: Cairo;
+    display: inline-block;
+    padding: 0px;
+    width: 400px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+   
+    transition: background-color 0.3s;
+}
+
+.container form #button:hover {
+    font-family: Cairo;
+    color: #ffffff;
+    font-weight: 17px;
+    background-color: #420202;
+    
+}
+
+
+
+::-webkit-scrollbar{
+    width: 9px;
+}
+::-webkit-scrollbar-track{
+    background:#000000;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#fbfbfb, #000000);
+    border-radius: 26px;
+    height: 12%;
+
+}
+
+
+/* Footer styles */
+footer {
+    font-family: Cairo;
+    font-size: 10px;
+    text-align: center;
+    padding: 3px;
+    background-color: #030303;
+    color: #fff;
+    margin-top: auto;
+}
+/* Terms and Condition | Privacy */
+.TCP {
+    list-style-type: none;
+    display: flex;
+    font-family: Cairo;
+    color: #fff;
+}
+
+.TCP li {
+    font-size: 11px;
+    font-family: Cairo;
+}
+
+.TCP a {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #FFF;
+    transition: color 0.3s;
+    font-family: Cairo;
+}
+/*END*/
+
+
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+  }
+
+ 
+  /* Adjustments for small screens */
+@media only screen and (max-width: 850px) {
+    header {
+        padding: 0 20px; /* Adjust padding for header */
+    }
+
+    .nav-links {
+        flex-wrap: wrap; /* Allow navigation links to wrap */
+        justify-content: center; /* Center align navigation links */
+        margin: 20px 0; /* Add margin for spacing */
+    }
+
+    .nav-links li {
+        font-size: 14px; /* Increase font size for navigation links */
+    }
+
+    .text-container {
+        flex-direction: column; /* Arrange text containers vertically */
+    }
+
+    .text p {
+        font-size: 14px; /* Adjust font size for text */
+        margin-top: 20px; /* Add margin for spacing */
+    }
+
+    .cta-button {
+        width: 100%; /* Make CTA button full width */
+        max-width: 300px; /* Limit maximum width */
+        margin-top: 20px; /* Add margin for spacing */
+    }
+}
+
+/* Adjustments for medium screens */
+@media only screen and (max-width: 1280px) {
+    /* Add any necessary adjustments for medium screens here */
+}
+
+/* Styles for large screens */
+@media (min-width: 1281px) {
+    .nav-links {
+        margin-right: 50px; /* Increase margin for navigation links */
+    }
+
+
+    .text p {
+        font-size: 16px; /* Increase font size for text */
+    }
+
+    .cta-button {
+        max-width: 400px; /* Increase maximum width for CTA button */
+    }
+}
