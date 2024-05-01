@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 app.post('/api/detect/detectText', async (req, res) => {
     try {
         const inputText = req.body.input_text;
-        const apiKey = "14b71190-ab93-4e5e-a23f-065f09544d42"; // Replace with your API key
+        const apiKey = ""; // Replace with your API key
         const apiUrl = "https://api.zerogpt.com/api/detect/detectText";
 
         // Dynamic import for node-fetch
@@ -67,8 +67,8 @@ app.post('/api/detect/detectFile', upload.single('file'), (req, res) => {
     data.append('file', fileData, { filename: req.file.originalname });
 
     const headers = {
-        'ApiKey': '14b71190-ab93-4e5e-a23f-065f09544d42',
-        'Authorization': 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcxODkzIiwicm9sZSI6IjMiLCJzYWxhdGFfZW5naW5lIjoiMi43IiwiY29zdF9wZXJfdGhvdXNhbmQiOiIwLjAzNCIsIm51bWJlcl9vZl9jaGFyYWN0ZXJzIjoiNTAwMDAiLCJudW1iZXJfb2ZfZmlsZXMiOiI0MCIsImV4cCI6MTc0MzE1OTgzOH0.doNTrZFAfLJc9h9C7O6kWzvbbHbsucck45U8qsjZME2Ny0bNLZ7a25YHdtTNqt0osswDZEwjjXc8ECNNsecOWdLhabcEzIH1565CrXYUWFxBvXUDXam-JgGtEvmV4WQr59VOnItduTPqPnxO1GR6ZNkBjaM16T0BpBco-GL8ClY',
+        'ApiKey': '',
+        'Authorization': 'Bearer ',
         ...data.getHeaders()
     };
 
