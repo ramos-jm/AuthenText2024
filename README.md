@@ -54,8 +54,9 @@ Showcasing the core pages of **AuthenText AI** with their functionalities:
 
 🏠 Features & About Page
 
-![Features Page](aufeat.png)
 ![About Page](aubout.png)
+![Features Page](aufeat.png)
+
 
 The Features & About Page introduces users to AuthenText AI with a clean, responsive interface.
 It highlights the platform’s purpose, key functionalities, and how its AI-driven approach redefines text manipulation detection.
