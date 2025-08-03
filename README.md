@@ -117,7 +117,7 @@ It provides detailed insights into detected manipulations, accuracy scores, and 
 * ✅ Admin dashboard for analytics and content moderation
 * ✅ Docker support for containerization
 * ✅ Real-time browser extension integration
-* ✅ PDF and image text detection (OCR)
+* ✅ Image text detection (OCR)
 
 ---
 
