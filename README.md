@@ -83,7 +83,7 @@ It provides detailed insights into detected manipulations, accuracy scores, and 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/authentext-ai.git
+   git clone https://github.com/ramos-jm/authentext-ai.git
    ```
 
 2. **Install dependencies**
